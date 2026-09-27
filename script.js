@@ -4,7 +4,7 @@ const resultsElement = document.querySelector("#results");
 const messageElement = document.querySelector("#message");
 const copyNotification = document.querySelector("#copy-notification");
 
-const letters = ["P", "E", "C", "O"];
+const letters = ["Р", "Е", "С", "О"];
 const maxNumbers = letters.length ** 3 * 10 ** 3;
 let generatedNumbers = [];
 let notificationTimeout;
