@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Генератор уникальных номеров по шаблону SNNNSS."
+    />
+    <title>Генератор номеров</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="generator" aria-labelledby="page-title">
+        <div class="heading">
+          <h1 id="page-title">Генератор номеров</h1>
+          <p class="description">
+            Буквы <strong>P, E, C, O</strong> и цифры от 0 до 9. Каждый
+            сгенерированный номер уникален.
+          </p>
+        </div>
+
+        <form id="generator-form" class="controls">
+          <label for="quantity">Количество</label>
+          <div class="control-row">
+            <input
+              id="quantity"
+              name="quantity"
+              type="number"
+              min="1"
+              max="64000"
+              value="20"
+              inputmode="numeric"
+              required
+            />
+            <button type="submit">Генерация</button>
+          </div>
+          <p id="message" class="message" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="result-header">
+          <h2>Результат</h2>
+        </div>
+        <output id="results" class="results" aria-label="Сгенерированные номера">
+          Нажмите «Генерация», чтобы получить номера.
+        </output>
+      </section>
+    </main>
+
+    <p id="copy-notification" class="copy-notification" role="status" aria-live="polite">
+      Скопировано в буфер обмена
+    </p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
